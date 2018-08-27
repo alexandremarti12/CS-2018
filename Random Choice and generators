@@ -1,0 +1,26 @@
+Random Number (FLOAT)
+
+import random
+MyNumber = random.uniform(0.1, 9.9)
+print(MyNumber)
+
+
+
+Coin Toss (CHoice)
+
+import random
+Coin_Toss = random.choice(["Heads","Tails"])
+print(Coin_Toss)
+
+
+
+Name from list generator with choice to remove
+
+import random
+Choose_Name = ["James","John","Mark","Rick"]
+for i in range(1,10):
+    chosen = random.choice(Choose_Name)
+    print(chosen)
+    timetochoose = input("Remove name? (YES or NO)")
+    if timetochoose == ("YES"):
+        Choose_Name.remove(chosen)
