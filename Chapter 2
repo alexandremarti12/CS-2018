@@ -51,3 +51,14 @@ time = 14
 timepassed = int(input("howmuchtime?"))
 print(time+(timepassed%24))
 
+EXCERCISE 8
+time = int(input("What time is it?"))
+timepassed = int(input("How much time has passed?"))
+if timepassed > 24 :
+    print(time + (timepassed % 24))
+
+
+if timepassed< 24 :
+    print(time + timepassed)
+    if (time + (timepassed % 24)) > 24 :
+        print(((time + (timepassed % 24)) - 24))
