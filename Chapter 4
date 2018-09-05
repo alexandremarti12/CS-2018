@@ -1,0 +1,20 @@
+import turtle
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+def drawsquare(f, turn):
+    for i in range(4):
+        turtle.forward(f)
+        turtle.left(turn)
+
+def make_turtle(colr, sz):
+    t = turtle.Turtle()
+    t.color(colr)
+    t.pensize(sz)
+    return t
+
+make_turtle("pink", 3)
+drawsquare(20, 90)
+
+wn.mainloop()
