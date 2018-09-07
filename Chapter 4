@@ -18,3 +18,38 @@ make_turtle("pink", 3)
 drawsquare(20, 90)
 
 wn.mainloop()
+
+
+EXERCISE 2
+
+import turtle
+
+def draw_square(t, sz):
+    for i in range(4):
+        t.left(90)
+        t.forward(sz)
+
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+saurav = turtle.Turtle()
+saurav.pensize(3)
+saurav.color("hotpink")
+saurav.speed(10)
+
+size = 20
+
+for i in range (5):
+    draw_square(saurav, size)
+    saurav.penup()
+    saurav.forward(20)
+    saurav.right(90)
+    saurav.forward(20)
+    saurav.left(90)
+    saurav.pendown()
+    size = size + 40
+
+wn.mainloop()
+
+EXERCISE 3
