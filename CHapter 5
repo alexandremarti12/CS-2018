@@ -1,0 +1,253 @@
+EXERCISE 1
+
+check = -1
+count = 0
+
+Day = [0,1,2,3,4,5,6]
+Dayname = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+x = int(input("Please enter day number"))
+x = x-1
+
+while check == -1:
+    y = Day[count]
+    if x == y:
+        check = int(x)
+    count = count + 1
+print (Dayname[check])
+
+
+EXERCISE 2
+
+Day = [0,1,2,3,4,5,6]
+DayWord = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+
+a = int(input("Day leaving"))
+b = int(input("Length of stay"))
+c = b % 7
+day_leaving = a + c
+print(DayWord[day_leaving])
+
+
+EXERCISE 3
+
+a <= b
+a < b
+a< 18 and day != 3
+a<18 and day == 3
+
+
+EXERCISE 4
+
+True
+False
+False
+True
+
+
+EXERCISE 5
+
+True
+True
+True
+True
+True
+True
+False
+True
+
+
+EXERCISE 6
+
+xs = [83, 75, 74.9, 70, 69.9, 65, 60, 59.9, 55, 50, 49.9, 45, 44.9, 40, 39.9, 2, 0]
+
+for n in xs:
+    if n < 40:
+        print("F3")
+    elif n >= 40 and n < 45:
+        print("F2")
+    elif n >= 45 and n < 50:
+        print("F1 Supp")
+    elif n >= 50 and n < 60:
+        print("Third")
+    elif n >= 60 and n < 70:
+        print("Second")
+    elif n >= 70 and n < 75:
+        print("Upper Second")
+    elif n >= 75:
+        print("First")
+        
+
+EXERCISE 7
+
+import turtle
+
+def draw_bar(t, height):
+
+    t.begin_fill()
+    t.left(90)
+    t.forward(height)
+    t.write("  "+ str(height))
+    t.right(90)
+    t.forward(40)
+    t.right(90)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()
+    t.penup()
+    t.forward(10)
+    t.pendown()
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()
+tess.color("blue", "red")
+tess.pensize(3)
+
+xs = [48,117,200,240,160,260,220]
+
+for a in xs:
+    draw_bar(tess, a)
+
+wn.mainloop()
+
+
+EXERCISE 8
+
+import turtle
+
+def draw_bar(t, height):
+
+
+    t.begin_fill()
+    t.left(90)
+    t.forward(height)
+    t.write("  "+ str(height))
+    t.right(90)
+    t.forward(40)
+    t.right(90)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()
+    t.penup()
+    t.forward(10)
+    t.pendown()
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+xs = [48,117,200,240,160,260,220]
+tess = turtle.Turtle()
+tess.pensize(3)
+tess.speed(1000)
+
+x = "red"
+
+for a in xs:
+    if a >= 200:
+        x = "red"
+    elif a >= 100 and a < 200:
+        x = "yellow"
+    else:
+        x = "green"
+    tess.color("blue", x)
+    draw_bar(tess, a)
+
+wn.mainloop()
+
+
+EXERCISE 9
+
+import turtle
+
+def draw_barplus(t, height):
+
+    t.begin_fill()
+    t.left(90)
+    t.forward(height)
+    if height < 0:
+        t.penup()
+        t.forward(-12)
+        t.pendown()
+    t.write("  "+ str(height))
+    if height < 0:
+        t.penup()
+        t.forward(12)
+        t.pendown()
+    t.right(90)
+    t.forward(40)
+    t.right(90)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()
+    t.penup()
+    t.forward(10)
+    t.pendown()
+
+wn = turtle.Screen()        
+wn.bgcolor("lightgreen")
+
+xs = [48,-117,200,240,-160,-260,220]
+tess = turtle.Turtle()
+tess.pensize(3)
+
+x = "red"
+
+for a in xs:
+    if a >= 200:
+        x = "red"
+    elif a >= 100 and a < 200:
+        x = "yellow"
+    else:
+        x = "green"
+    tess.color("blue", x)
+
+    draw_barplus(tess, a)
+
+wn.mainloop()
+
+
+EXERCISE 10
+
+def findhypot(s1,s2):
+    a = float(s1**2 + s2**2)
+    print (a)
+
+
+s1 = int(input("Side 1"))
+s2 = int(input("Side 2"))
+
+for i in (0,3,1):
+    findhypot(s1,s2)
+    
+
+EXERCISE 11
+
+big  = 0
+big2 = 0
+a = int(input("Enter side"))
+b = int(input("Enter side"))
+c = int(input("Enter side"))
+
+for a in (1,1,1):
+    if c > a and c > b:
+        big = c**2
+        big2 = a**2 + b**2
+    if b > a and b > c:
+        big = b**2
+        big2 = a**2 + c**2
+    if a > c and a > b:
+        big = a**2
+        big2 = c**2 + b**2
+
+
+for i in (0,3,1):
+
+
+    big = big
+    big2 = big2
+
+    if abs(big-big2) == 0:
+        print("The triangle is right angled")
+    else:
+        print ("Not a right angled triangle")
