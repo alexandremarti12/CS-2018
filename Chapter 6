@@ -1,0 +1,17 @@
+EXERCISE 1
+
+x = str(input("N, E, S, W?"))
+
+def turn_clockwise(x):
+    if x == "N":
+        print("E")
+    elif x == "E":
+        print("S")
+    elif x == "S":
+        print("W")
+    elif x == "W":
+        print("N")
+
+turn_clockwise(x)
+
+
