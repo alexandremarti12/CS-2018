@@ -15,3 +15,34 @@ def turn_clockwise(x):
 turn_clockwise(x)
 
 
+EXERCISE 2
+
+Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+x = int(input("What is your day number?"))
+x = x - 1
+
+def day_name(x):
+    x = x % 7
+    print(Days[x])
+
+day_name(x)
+
+
+EXERCISE 3
+
+Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+Numbers = [0, 1, 2, 3, 4, 5, 6]
+
+x = str(input("Please state a day"))
+
+def day_num(x):
+    for n in (0, 6, 1):
+        i = Days[n]
+        if x == i:
+            print(Numbers[n])
+
+day_num(x)
+
+
+EXERCISE 4
