@@ -55,3 +55,151 @@ def countuntileven(x):
 
 a = int(len(List))
 countuntileven(a)
+
+
+EXERCISE 6
+
+List = ["sad", "car", "google", "computer", "sam", "milk"]
+def wordsuntilsam(x):
+  count = 0
+  for i in range(0, x, 1):
+    if List[i] == 'sam':
+      count += 1
+      break
+    count += 1
+  print(count)
+  
+a = int(len(List))
+wordsuntilsam(a)
+
+
+EXERCISE 7
+
+def sqrt(x):
+  y = x * 0.1
+  w = y ** 2
+  while x - w > 0.001:
+    w = y ** 2
+    if w < x:
+      y = y + 0.1
+    else:
+        y = y -1
+    print("better")
+
+    print(y)
+    
+
+EXERCISE 9
+
+def print_triangular_numbers(n):
+  a = 0
+  for i in range(1,n+1,1):
+    a += i
+    print(a)
+
+print_triangular_numbers(5)
+
+
+EXERCISE 10
+
+def is_prime(x):
+  count = 0
+  for i in range(2, x, 1):
+    if x % i == 0:
+      count = count+1
+  if count == 0:
+    print("True")
+  else:
+    print("False")
+    
+
+EXERCISE 11
+
+import turtle
+
+List =  [(160, 20), (-43, 10), (270, 8), (-43, 12)]
+
+a = turtle.Screen()
+b = turtle.Turtle()
+b.pendown()
+
+for (i,j) in List:
+  b.left(i)
+  b.forward(j)
+
+a.exitonclick()
+
+EXERCISE 12
+
+import turtle
+
+import turtle
+
+window = turtle.Screen()
+
+bob = turtle.Turtle()
+bob.pensize(6)
+
+bob.pendown()
+bob.forward(30)
+bob.right(-90)
+bob.forward(30)
+bob.right(-135)
+bob.forward((1800**0.5))
+bob.right(135)
+bob.forward(30)
+bob.right(53.13024)
+bob.forward(20)
+bob.right(73.73952)
+bob.forward(20)
+bob.right(143.13024)
+bob.forward(30)
+bob.left(135)
+bob.forward((1800**0.5))
+
+window.exitonclick()
+
+
+EXERCISE 13
+
+CAN, CAN, CANNOT, CANNOT, CAN, CANNOT
+
+
+EXERCISE 14
+
+def num_digits(n):
+  count = 0
+  if n == 0:
+    print(1)
+  else:
+    while n != 0:
+        count = count + 1
+        n = n // 10
+    print ( count )
+    
+    
+EXERCISE 15
+
+def num_even_digits(x):
+  o = str(x)
+  count = 0
+  for i in range(0, len(o), 1):
+    check = o[i:i+1]
+    check = int(check)
+    if check % 2 == 0:
+      count += 1
+  print(count)
+
+number = 987698265
+num_even_digits(number)
+
+EXERCISE 16
+
+List =[2, 4, 5]
+def sum(L):
+  total = 0
+  for i in L:
+    total += (i**2)
+  print(total)
+
+sum(List)
