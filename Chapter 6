@@ -46,3 +46,158 @@ day_num(x)
 
 
 EXERCISE 4
+
+Days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+def day_add(a, b):
+    for i in range (0, 6, 1):
+      x = Days[i]
+      if a == x:
+        sum = (b + i) % 7
+        print(Days[sum])
+
+y = str(input("What day is it today?"))
+z = int(input("How many days until you leave?"))
+
+day_add(y, z)
+
+
+EXERCISE 5
+
+Works
+
+
+EXERCISE 6
+
+Month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+Days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+def days_in_month(x):
+  for i in range(0, 11, 1):
+    a = Month[i]
+    if a == x:
+      print(Days[i])
+
+z = str(input("Input Month"))
+
+days_in_month(z)
+
+
+EXERCISE 7
+
+def to_secs(a, b, c):
+  x = a * 3600
+  y = b * 60
+  print(x + y + c)
+
+j = int(input("How many hours?"))
+k = int(input("How many minutes?"))
+l = int(input("How many seconds?"))
+to_secs(j, k, l)
+
+
+EXERCISE 8
+
+def to_secs(a, b, c):
+  x = a * 3600
+  y = b * 60
+  print(round(x + y + c))
+
+j = float(input("How many hours?"))
+k = float(input("How many minutes?"))
+l = float(input("How many seconds?"))
+to_secs(j, k, l)
+
+
+EXERCISE 9
+
+def hours_in(a):
+  b = a % 3600
+  print(((a-b) / 3600))
+  def minutes_in(c):
+    c = b % 60
+    print(((b-c) / 60))
+    print(c)
+
+x = int(input("How many seconds?"))
+hours_in(x)
+
+
+EXERCISE 10
+
+test(3 % 4 == 0) - Fails - 3 mod 4 is 3
+test(3 % 4 == 3)
+test(3 / 4 == 0) - Fails - Answer is a decimal
+test(3 // 4 == 0) - Fails - Gives the integer answer of 3 / 4, rounded down
+test(3+4  *  2 == 14) - Fails - Order of operations are wrong
+test(4-2+2 == 0)
+test(len("hello, world!") == 13)
+
+
+EXERCISE 11
+
+def compare(a, b):
+  if a > b:
+    print(1)
+  elif a == b:
+    print(0)
+  elif a < b:
+    print(-1)
+    
+
+EXERCISE 12
+
+import math
+
+def hypotenuse(a, b):
+  length = math.sqrt((a**2) + (b**2))
+  print(length)
+
+
+EXERCISE 13
+
+def slope(x1, y1, x2, y2):
+  a = y2 - y1
+  b = x2 - x1
+  grad = a/b
+  print(grad)
+
+
+EXERCISE 14
+
+def is_even(n):
+  if (n%2) == 0:
+    return True
+  else:
+    return False
+    
+
+EXERCISE 15
+
+def is_even(n):
+  if (n%2) == 0:
+    return True
+  else:
+    return False
+
+def is_odd(n):
+  if is_even(n) == True:
+    return False
+  else:
+    return True
+    
+    
+EXERCISE 18
+
+def f2c(t):
+  a = (t-32)/1.8
+  a = round(a, 2)
+  print(a)
+
+
+EXERCISE 19
+
+def c2f(t):
+    a = (t*1.8)+32
+    a = round(a,2)
+    print(a)
