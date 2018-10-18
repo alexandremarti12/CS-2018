@@ -121,3 +121,33 @@ def sub(string,sub):
         if temp == sub:
             count += 1
     return(count)
+
+
+EXERCISE 12
+
+def remove(substr,theStr):
+  location = theStr.find(substr)
+  if location < 0:
+    return theStr
+  finalStr = theStr[:location] + theStr[location+len(substr):]
+  return finalStr
+  
+
+EXERCISE 13
+
+def remove(substr,BigString):
+  location = BigString.find(substr)
+  if location < 0:
+    return BigString
+  finalStr = BigString[:location] + BigString[location+len(substr):]
+  return finalStr
+
+def remove_all(substr,BigString):
+  a = BigString
+  while a:
+    if remove(substr,a) == a:
+      return remove(substr,a)
+    else:
+      a = remove(substr,a)
+
+print(remove_all("iss", "Mississippi"))
