@@ -1,0 +1,73 @@
+import random
+
+paritytype = str(input("input EVEN or ODD for even and odd parity?"))
+
+biglist = []
+
+for i in range(7):
+    byte = ''
+    for K in range(7):
+        w = random.randint(0,1)
+        w = str(w)
+        byte += w
+
+    count = 0
+    for c in byte:
+        if c == "1":
+            count += 1
+
+    string = ""
+    if count % 2 == 1:
+        if paritytype == "ODD":
+            string += byte
+            string += "0"
+        if paritytype == "EVEN":
+            string += byte
+            string += "1"
+
+    if count % 2 == 0:
+        if paritytype == "ODD":
+            string += byte
+            string += "1"
+        if paritytype == "EVEN":
+            string += byte
+            string += "0"
+
+    biglist.append(string)
+
+print(biglist)
+
+for i in biglist:
+    print (i)
+
+parity_byte = ''
+
+if paritytype == "EVEN":
+    for i in range(0,8,1):
+        List = []
+        for j in biglist:
+            List.append(j[i])
+        count2 = 0
+        for i in List:
+            if i == '1':
+                count2 += 1
+        if count2 % 2 == 0:
+            parity_byte += '0'
+        elif count2 % 2 == 1:
+            parity_byte += '1'
+
+if paritytype == "ODD":
+    for i in range(0,8,1):
+        List = []
+        for j in biglist:
+            List.append(j[i])
+        count2 = 0
+        for i in List:
+            if i == '1':
+                count2 += 1
+        if count2 % 2 == 0:
+            parity_byte += '1'
+        elif count2 % 2 == 1:
+            parity_byte += '0'
+
+print(parity_byte)
