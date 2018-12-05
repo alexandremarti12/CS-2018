@@ -1,0 +1,10 @@
+def biglist():
+    monsters_list = []
+    with open('Monsters.txt') as saurav:
+        for line in saurav:
+            part = line.split(",")
+            monsters_list.append(part[1])
+        del monsters_list[0]
+        return monsters_list
+
+print(biglist())
