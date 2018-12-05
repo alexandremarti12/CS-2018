@@ -1,0 +1,2 @@
+MyNumber = random.uniform(0.1, 9.9)
+print(MyNumber)
