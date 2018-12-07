@@ -1,0 +1,17 @@
+def searchmonster():
+    monstersfound = 0
+    whatsearch = input("What monster are you searching for?")
+    with open('Monsters.txt') as saurav:
+        for line in saurav:
+            part = line.split(",")
+            id = part[0]
+            monstername = part[1]
+            if whatsearch == monstername:
+                print("Your monster was found")
+                print("The ID for "+whatsearch+" is "+id)
+                monstersfound = 1
+                break
+    if monstersfound == 0:
+        print("No monster found.")
+
+searchmonster()
